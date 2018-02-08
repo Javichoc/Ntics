@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Provefrut S.A.</title>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="JS/main.js"></script>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="CSS/estilos.css" />
+<link rel="stylesheet" href="CSS/nivo-slider.css">
+<link rel="stylesheet" href="CSS/mi-slider.css">
+<script src="JS/jquery.nivo.slider.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {
+	background: #F5F5F5;
+	background-size: 1360px 400px;
+	background-color: #black;
+	color: #999;
+	<!--
+	hace
+	que
+	baje
+	el
+	fondo
+	-->
+}
+->
+</style>
+
+<style>
+#footer {
+	background: #C0C0C0;
+	padding: 2em 0;
+	text-align: center;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+	padding: 2em 0;
+	text-align: center;
+}
+
+.button {
+	position: absolute;
+	top: 470px;
+	left: 170px;
+	text-decoration: none;
+	font: 15px Verdana;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	padding: 15px 20px;
+	border-radius: 5px;
+	transition: background .5s, border .5s, color .5s;
+}
+
+.button:hover {
+	background: white;
+	border: solid black 1px;
+	color: black;
+}
+</style>
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var arrow = $(".arrow-up");
+		var form = $(".login-form");
+		var status = false;
+		$("#login").click(function(event) {
+			event.preventDefault();
+			if (status == false) {
+				arrow.fadeIn();
+				form.fadeIn();
+				status = true;
+				var us;
+				var cont;
+				us = document.getElementById("usuario").value;
+				cont = document.getElementById("contra").value;
+				if (us == "carla" && cont == "222") {
+					alert("Usted se a iniciado como administradora");
+					window.location = "Trabajo.html"; // Redirecting to other page.
+					return false;
+				}
+			} else {
+				arrow.fadeOut();
+				form.fadeOut();
+				status = false;
+			}
+
+		})
+	})
+</script>
+
+<script type="text/javascript">
+function validar() {
+	var us;
+	var cont;
+	us = document.getElementById("usuario").value;
+	cont = document.getElementById("contra").value;
+	if (us == "" || cont == "") {
+		alert("CAMPOS VACIOS");
+		return false;
+	}
+	
+	if (us == "oscar" && cont == "111") {
+		window.location = "https://provefrutsa.000webhostapp.com"; // Redirecting to other page.
+		return false;
+	}
+	if (us == "eddy" && cont == "222") {
+		window.location = "https://provefrutsa.000webhostapp.com"; // Redirecting to other page.
+		return false;
+	} else {
+		alert("Usuario no registrado");
+		
+		return false;
+	}
+
+}</script>
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Productos.html">Productos</a></li>
+					<li><a href="Comania.html">Nuestra Compa&ntilde&iacutea</a></li>
+					<li><a href="#">Seguro de Calidad</a></li>
+					<li><a href="#">EEFF</a></li>
+					<li><a href="Contac.html">Cont&aacutectenos</a></li>
+					<li><a href="#">Estados Financieros</a></li>
+					<li><a href="#">Calificaci&oacuten de ries</a></li>
+					<li><a href="#">Clienetes</a></li>
+					<li><a id="login" href="#">Ingresar</a></li>
+
+				</ul>
+			</nav>
+			<div class="arrow-up"></div>
+			<div class="login-form">
+				<form>
+					<label>Usuario</label>
+					<div>
+						<input id="usuario" type="text" placeholder="Usuario" required />
+					</div>
+					<label>Contrase&ntildea</label>
+					<div>
+						<input id="contra" type="password" placeholder="******"
+							required />
+					</div>
+					<div>
+						<input onclick="validar(this)" type="button" value="Log In" />
+					</div>
+					<div>
+						<a href="#"
+							style="text-decoration: none; position: relative; top: 20px; font-size: 16px; color: gray;"></a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="divc1"
+		style="width: 1347px; height: 650px; position: relative;">
+		<div align="center"
+			style="position: absolute; top: 30px; left: 200px; width: 300px; height: 330px;">
+			<font face="Verdana">
+				<h1 style="color: black;">Productos</h1>
+			</font>
+		</div>
+
+
+		<div class="divc"
+			style="position: absolute; top: 90px; left: 250px; height: 300px">
+			<img class="imagen" alt="col" src="Imagenes/i1.jpg" img width="139"
+				height="105">
+			<h3><a class="a1" href="BrocoliF.html" >Broccoli Florets (Organic / Conventional)</a></h3>
+		</div>
+		<div class="divc"
+			style="position: absolute; top: 90px; left: 750px; height: 300px">
+			<img class="imagen" alt="col" src="Imagenes/i2.jpg" img width="139"
+				height="105">
+			<h3>Broccoli Cuts</h3>
+		</div>
+		<div class="divc"
+			style="position: absolute; top: 250px; left: 250px; height: 300px">
+			<img class="imagen" alt="col" src="Imagenes/i3.jpg" img width="139"
+				height="105">
+			<h3>Broccoli Spears</h3>
+		</div>
+		<div class="divc"
+			style="position: absolute; top: 250px; left: 750px; height: 300px">
+			<img class="imagen" alt="col" src="Imagenes/i4.jpg" img width="139"
+				height="105">
+			<h3>Chopped Broccoli</h3>
+		</div>
+	</div>
+
+	<div class="divc"
+		style="position: absolute; top: 470px; left: 250px; height: 300px">
+		<img class="imagen" alt="col" src="Imagenes/i5.jpg" img width="139"
+			height="105">
+		<h3>Diced Broccoli Stalks</h3>
+	</div>
+	<div class="divc"
+		style="position: absolute; top: 470px; left: 750px; height: 300px">
+		<img class="imagen" alt="col" src="Imagenes/i6.jpg" img width="139"
+			height="105">
+		<h3>Cauliflower Florets</h3>
+	</div>
+
+	<div style="width: 1340px; height: 180px; position: relative;">
+
+		<div style="position: absolute; top: 10px; left: 175px;">
+			<img alt="sello" src="Imagenes/pro.png" width="550" height="150">
+		</div>
+
+
+
+		<div style="position: absolute; top: 10px; left: 1300px;">
+
+			<a href="#" target="_blank"> <img alt="facebook"
+				src="iconos/facebook.png" width="34" height="34"></a> <a href="#"
+				target="_blank"> <img alt="google" src="iconos/google-plus.png"
+				width="34" height="34"></a> <a href="#" target="_blank"> <img
+				alt="twitter" src="iconos/twitter.png" width="34" height="34"></a>
+
+		</div>
+
+
+	</div>
+
+	<div id="footer">Todos los Derechos Reservados</div>
+
+</body>
+</html>

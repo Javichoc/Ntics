@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Provefrut S.A.</title>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="JS/main.js"></script>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="CSS/estilos.css" />
+
+<link rel="stylesheet" href="CSS/nivo-slider.css">
+<link rel="stylesheet" href="CSS/mi-slider.css">
+<script src="JS/jquery.nivo.slider.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {
+	background: #F5F5F5;
+	background-size: 1360px 400px;
+	background-color: #black;
+	color: #999;
+	<!--
+	hace
+	que
+	baje
+	el
+	fondo
+	-->
+}
+->
+</style>
+
+<style>
+#footer {
+	background: #C0C0C0;
+	padding: 2em 0;
+	text-align: center;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+	padding: 2em 0;
+	text-align: center;
+}
+
+.button {
+	position: absolute;
+	top: 470px;
+	left: 170px;
+	text-decoration: none;
+	font: 15px Verdana;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	padding: 15px 20px;
+	border-radius: 5px;
+	transition: background .5s, border .5s, color .5s;
+}
+
+.button:hover {
+	background: white;
+	border: solid black 1px;
+	color: black;
+}
+</style>
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var arrow = $(".arrow-up");
+		var form = $(".login-form");
+		var status = false;
+		$("#login").click(function(event) {
+			event.preventDefault();
+			if (status == false) {
+				arrow.fadeIn();
+				form.fadeIn();
+				status = true;
+				var us;
+				var cont;
+				us = document.getElementById("usuario").value;
+				cont = document.getElementById("contra").value;
+				if (us == "carla" && cont == "222") {
+					alert("Usted se a iniciado como administradora");
+					window.location = "Trabajo.html"; // Redirecting to other page.
+					return false;
+				}
+			} else {
+				arrow.fadeOut();
+				form.fadeOut();
+				status = false;
+			}
+
+		})
+	})
+</script>
+
+<script type="text/javascript">
+	function validar() {
+		var us;
+		var cont;
+		us = document.getElementById("usuario").value;
+		cont = document.getElementById("contra").value;
+		if (us == "" || cont == "") {
+			alert("CAMPOS VACIOS");
+			return false;
+		}
+
+		if (us == "oscar" && cont == "111") {
+			window.location = "https://provefrutsa.000webhostapp.com"; // Redirecting to other page.
+			return false;
+		}
+		if (us == "eddy" && cont == "222") {
+			window.location = "https://provefrutsa.000webhostapp.com"; // Redirecting to other page.
+			return false;
+		} else {
+			alert("Usuario no registrado");
+
+			return false;
+		}
+
+	}
+</script>
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Productos.html">Productos</a></li>
+					<li><a href="Comania.html">Nuestra Compa&ntilde&iacutea</a></li>
+					<li><a href="#">Seguro de Calidad</a></li>
+					<li><a href="#">EEFF</a></li>
+					<li><a href="Contac.html">Cont&aacutectenos</a></li>
+					<li><a href="#">Estados Financieros</a></li>
+					<li><a href="#">Calificaci&oacuten de ries</a></li>
+					<li><a href="#">Clienetes</a></li>
+					<li><a id="login" href="#">Ingresar</a></li>
+
+				</ul>
+			</nav>
+			<div class="arrow-up"></div>
+			<div class="login-form">
+				<form>
+					<label>Usuario</label>
+					<div>
+						<input id="usuario" type="text" placeholder="Usuario" required />
+					</div>
+					<label>Contrase&ntildea</label>
+					<div>
+						<input id="contra" type="password" placeholder="******" required />
+					</div>
+					<div>
+						<input onclick="validar(this)" type="button" value="Log In" />
+					</div>
+					<div>
+						<a href="#"
+							style="text-decoration: none; position: relative; top: 20px; font-size: 16px; color: gray;"></a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="divc1"
+		style="width: 1347px; height: 690px; position: relative;">
+		<div align="center"
+			style="position: absolute; top: 30px; left: 60px; width: 600px; height: 830px;">
+			<font face="Verdana">
+				<h1 style="color: black;">Nuestra Compa&ntilde&iacutea</h1>
+			</font>
+		</div>
+
+
+		<div class="divc"
+			style="position: absolute; top: 90px; left: 170px; height: 300px">
+			<font face="Verdana">
+				<h3>Nuestra gente / proceso de corte</h3>
+			</font> <br> <img class="imagen" alt="col" src="Imagenes/c3.jpg" img
+				width="371" height="242">
+		</div>
+		<div class="divc"
+			style="position: absolute; top: 80px; left: 590px; height: 300px">
+			<font face="Verdana">
+				<h5>Establecida en 1989, Provefrut S.A. es el primer y
+					principal productor de vegetales congelados en Ecuador. Somos muy
+					conocidos en los mercados de Europa, Am&eacuterica y Asia por
+					ofrecer productos y servicios que satisfacen las expectativas de
+					nuestros clientes en t&eacuterminos de calidad, volumen y
+					competitividad premium.</h5> <br>
+				<h3>Misi&oacuten</h3> <br>
+				<h5>Somos una empresa agroindustrial que produce y exporta
+					vegetales congelados de alta calidad, contribuyendo al desarrollo
+					sostenible de nuestros Empleados y el Medio Ambiente.</h5> <br>
+				<h3>Visi&oacuten</h3> <br>
+				<h5>Convertirnos en la mayor empresa de agronegocios en
+					crecimiento en la regi&oacuten, a trav&eacuts de la
+					diversificaci&oacuten de productos producidos con altos
+					est&aacutendares de calidad.</h5> <br>
+				<h3>Vaores</h3> <br>
+				<h5>
+					<li>El respeto.</li>
+					<li>Honestidad.</li>
+					<li>Compromiso.</li>
+					<li>Responsabilidad.</li>
+					<li>Disciplina.</li>
+				</h5>
+				<br>
+				<h3>Pol&iacutetica Corporativa</h3>
+				<br>
+				<h5>Provefrut S.A. est&aacute totalmente comprometido con la
+					satisfacci&oacuten del cliente, cumpliendo con las especificaciones y
+					regulaciones del cliente con un estricto sistema de garant&iacutea de
+					calidad que incluye BPM y HACCP, garantizando la calidad y
+					seguridad de nuestros productos. Nuestra &eacutetica se basa en la
+					responsabilidad social, el respeto por el medio ambiente de manera
+					sostenible y la innovaci&oacuten tecnol&oacutegica; promoviendo a nuestros
+					colaboradores una cultura de mejora continua con un sentido de
+					orgullo y alta estima por el desarrollo y crecimiento de la
+					empresa.</h5>
+
+
+			</font> <br>
+
+		</div>
+
+	</div>
+
+	<div style="width: 1340px; height: 180px; position: relative;">
+
+		<div style="position: absolute; top: 10px; left: 175px;">
+			<img alt="sello" src="Imagenes/pro.png" width="550" height="150">
+		</div>
+
+
+
+		<div style="position: absolute; top: 10px; left: 1300px;">
+
+			<a href="#" target="_blank"> <img alt="facebook"
+				src="iconos/facebook.png" width="34" height="34"></a> <a href="#"
+				target="_blank"> <img alt="google" src="iconos/google-plus.png"
+				width="34" height="34"></a> <a href="#" target="_blank"> <img
+				alt="twitter" src="iconos/twitter.png" width="34" height="34"></a>
+
+		</div>
+
+
+	</div>
+
+	<div id="footer">Todos los Derechos Reservados</div>
+
+</body>
+</html>

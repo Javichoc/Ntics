@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Provefrut S.A.</title>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="JS/main.js"></script>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="CSS/estilos.css" />
+
+<link rel="stylesheet" href="CSS/nivo-slider.css">
+<link rel="stylesheet" href="CSS/mi-slider.css">
+<script src="JS/jquery.nivo.slider.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {
+	background-image:url("Imagenes/c2.jpg");
+	background-repeat:no-repeat;
+	background-size: 1360px 500px;
+	background-color: #black;
+	color: #999;
+
+	<!--
+	hace
+	que
+	baje
+	el
+	fondo
+	-->
+}
+->
+</style>
+
+<style>
+#footer {
+	background: #C0C0C0;
+	padding: 2em 0;
+	text-align: center;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+	padding: 2em 0;
+	text-align: center;
+}
+
+.button {
+	position: absolute;
+	top: 470px;
+	left: 170px;
+	text-decoration: none;
+	font: 15px Verdana;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	padding: 15px 20px;
+	border-radius: 5px;
+	transition: background .5s, border .5s, color .5s;
+}
+
+.button:hover {
+	background: white;
+	border: solid black 1px;
+	color: black;
+}
+</style>
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var arrow = $(".arrow-up");
+		var form = $(".login-form");
+		var status = false;
+		$("#login").click(function(event) {
+			event.preventDefault();
+			if (status == false) {
+				arrow.fadeIn();
+				form.fadeIn();
+				status = true;
+				var us;
+				var cont;
+				us = document.getElementById("usuario").value;
+				cont = document.getElementById("contra").value;
+				if (us == "carla" && cont == "222") {
+					alert("Usted se a iniciado como administradora");
+					window.location = "Trabajo.html"; // Redirecting to other page.
+					return false;
+				}
+			} else {
+				arrow.fadeOut();
+				form.fadeOut();
+				status = false;
+			}
+
+		})
+	})
+</script>
+
+<script type="text/javascript">
+	function validar() {
+		var us;
+		var cont;
+		us = document.getElementById("usuario").value;
+		cont = document.getElementById("contra").value;
+		if (us == "" || cont == "") {
+			alert("CAMPOS VACIOS");
+			return false;
+		}
+		
+		if (us == "oscar" && cont == "111") {
+			window.location = "https://provefrutsa.000webhostapp.com"; // Redirecting to other page.
+			return false;
+		}
+		if (us == "eddy" && cont == "222") {
+			window.location = "https://provefrutsa.000webhostapp.com"; // Redirecting to other page.
+			return false;
+		} else {
+			alert("Usuario no registrado");
+			
+			return false;
+		}
+
+	}
+</script>
+</head>
+
+<body>
+	<header>
+		<div class="contenedor">
+
+			<nav class="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Productos.html">Productos</a></li>
+					<li><a href="Comania.html">Nuestra Compa&ntilde&iacutea</a></li>
+					<li><a href="#">Seguro de Calidad</a></li>
+					<li><a href="#">EEFF</a></li>
+					<li><a href="Contac.html">Cont&aacutectenos</a></li>
+					<li><a href="#">Estados Financieros</a></li>
+					<li><a href="#">Calificaci&oacuten de ries</a></li>
+					<li><a href="#">Clienetes</a></li>
+					<li><a id="login" href="#">Ingresar</a></li>
+
+				</ul>
+			</nav>
+			<div class="arrow-up"></div>
+			<div class="login-form">
+				<form>
+					<label>Usuario</label>
+					<div>
+						<input id="usuario" type="text" placeholder="Usuario" required />
+					</div>
+					<label>Contrase&ntildea</label>
+					<div>
+						<input id="contra" type="password" placeholder="******"
+							required />
+					</div>
+					<div>
+						<input onclick="validar(this)" type="button" value="Log In" />
+					</div>
+					<div>
+						<a href="#"
+							style="text-decoration: none; position: relative; top: 20px; font-size: 16px; color: gray;"></a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="slider-wrapper theme-mi-slider"
+		style="width: 900px; height: 550px; left: 230px; position: relative;">
+		<div id="slider" class="nivoSlider">
+			<img src="Imagenes/p8.jpg" alt="" title="#htmlcaption4" /> <img
+				src="Imagenes/p1.jpg" alt="" title="#htmlcaption1" /> <img
+				src="Imagenes/p3.jpg" alt="" title="#htmlcaption3" /> <img
+				src="Imagenes/p5.jpg" alt="" title="#htmlcaption4" />
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+
+	<div class="divc1"
+		style="width: 1347px; height: 370px; position: relative; ">
+		<div align="center"
+			style="position: absolute; top: 30px; left: 300px; width: 300px; height: 330px;">
+			<font
+				style="padding-left: 10px; padding-right: 15px; line-height: 23px;"
+				face="Verdana"><img
+				style="border-radius: 300px;" alt="fondo"
+				src="Imagenes/mi.png" width="150" height="150"> <br>Somos
+				una empresa agroindustrial que produce y exporta vegetales
+				congelados de alta calidad, contribuyendo al desarrollo sostenible
+				de nuestros Empleados y el Medio Ambiente.
+				</p> </font>
+		</div>
+
+		<div align="center"
+			style="position: absolute; top: 30px; left: 730px; width: 300px; height: 330px;">
+			<font
+				style="padding-left: 10px; padding-right: 15px; line-height: 23px;"
+				face="Verdana"> <img
+				style="border-radius: 300px;"  alt="fondo"
+				src="Imagenes/vi.png" width="150" height="150"> <br>Convertirnos
+				en la mayor empresa de agronegocios en crecimiento en la regi&oacuten, a
+				trav&eacutes de la diversificaci&oacuten de productos producidos con altos
+				est&aacutendares de calidad
+			</font>
+
+		</div>
+	</div>
+	<br>
+	<br>
+	<!-- <hr width="1347px" align="center" style="border: solid #616161 2px;"> -->
+
+	<div class="divc" style="width: 1347px; height: 550px;" align="center">
+		<div class="divcont1">
+			<img alt="col" src="Imagenes/broccoliCuts.jpg" img width="450"
+				height="240"> <font
+				style="padding-left: 10px; padding-right: 15px; line-height: 23px;"
+				face="Verdana">
+				<h3>Broccoli Cuts</h3> Los cortes de br&oacutecoli son una combinaci&oacuten
+				preempacada de floretes de br&oacutecoli y tallos de br&oacutecoli. Este
+				embalaje especial elimina la necesidad de una mayor manipulaci&oacuten de
+				los productos por parte del usuario..
+			</font> <br> <br> <br> <a class="button2" href="BrocoliF.html">Leer
+				M&aacutes</a>
+		</div>
+
+		<div class="divcont2">
+			<img alt="col" src="Imagenes/co1.jpg" img width="450" height="240">
+			<font
+				style="padding-left: 10px; padding-right: 15px; line-height: 23px;"
+				face="Verdana">
+				<h3>Cauliflower</h3> Los floretes de coliflor se seleccionan a
+				partir de variedades de materia prima de alta calidad que producen
+				un florete denso, compacto y blanco, adecuado para fines de
+				procesamiento, y que cumple con las estrictas especificaciones del
+				producto final..
+			</font> <br> <br> <a class="button2" href="#">Leer M&aacutes</a>
+		</div>
+	</div>
+
+	<div class="divc" style="width: 1347px; height: 550px;" align="center">
+		<div class="divcont1">
+			<img alt="col" src="Imagenes/co2.jpg" img width="450" height="240">
+			<font
+				style="padding-left: 10px; padding-right: 15px; line-height: 23px;"
+				face="Verdana">
+				<h3>Romanesco</h3> Los floretes de Romanesco se seleccionan de las
+				variedades que mejor se adaptan para producir la forma distinta y
+				&uacutenica de las flores, mientras se mantiene el color verde vivo y la
+				formaci&oacuten compacta que se espera de la calidad del producto final..
+			</font> <br> <br> <br> <a class="button2" href="#">Leer
+				M&aacutes</a>
+		</div>
+
+		<div class="divcont2">
+			<img alt="col" src="Imagenes/co3.jpg" img width="450" height="240">
+			<font
+				style="padding-left: 10px; padding-right: 15px; line-height: 23px;"
+				face="Verdana">
+				<h3>Broccoli Spears</h3> Lanzas de br&oacutecoli congeladas es el producto
+				preparado a partir de las cabezas sanas, limpias y frescas, y de las
+				partes adyacentes de los tallos de la planta de br&oacutecoli. Nuestras
+				Spears están diseñadas para satisfacer las necesidades de todos los
+				mercados..
+			</font> <br> <br> <br> <a class="button2" href="#">Leer
+				M&aacutes</a>
+		</div>
+	</div>
+
+
+	<div style="width: 1340px; height: 180px; position: relative;">
+
+		<div style="position: absolute; top: 10px; left: 175px;">
+			<img alt="sello" src="Imagenes/pro.png" width="550" height="150">
+		</div>
+
+
+
+		<div style="position: absolute; top: 10px; left: 1300px;">
+
+			<a href="#" target="_blank"> <img alt="facebook"
+				src="iconos/facebook.png" width="34" height="34"></a> <a href="#"
+				target="_blank"> <img alt="google" src="iconos/google-plus.png"
+				width="34" height="34"></a> <a href="#" target="_blank"> <img
+				alt="twitter" src="iconos/twitter.png" width="34" height="34"></a>
+
+		</div>
+
+
+	</div>
+
+	<div id="footer">Todos los Derechos Reservados</div>
+
+</body>
+</html>
